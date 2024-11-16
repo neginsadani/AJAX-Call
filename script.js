@@ -14,7 +14,13 @@ function fetchRandomQuote() {
 
   request.addEventListener("load", function () {
     const response = JSON.parse(request.responseText);
+
+    console.log(response);
+
     const { content, author } = response;
+
+    console.log(content, author);
+
     createCard({ content, author });
   });
 }
